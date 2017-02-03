@@ -3,12 +3,16 @@
 <head>
     <title>Twitch TV API example</title>
     <meta charset="utf-8" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.css" rel="stylesheet" />
 </head>
 <body ng-app="PomodoroClock">
     <div class="pomodoro-clock-container" ng-controller="PomodoroClockController">
-
+        <input class="timer-input" ng-model="timerSize" type="number" min="1" max="60" value="1" />
+        <a href="" class="button start-timer" ng-click="startTimer()">Start</a>
+        <a href="" class="button stop-timer" ng-click="stopTimer()">Stop</a>
+        <span class="timer-current"></span>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
